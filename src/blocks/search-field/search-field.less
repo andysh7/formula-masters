@@ -1,0 +1,25 @@
+.search-field {
+	position: relative;
+	
+	&:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		background: url('@{imagesPath}/base64/icon-search.png') no-repeat;
+		width: 15px;
+		height: 15px;
+		top: 7px;
+		left: 7px;
+	}
+	
+	&__input {
+		text-transform: uppercase;
+		background: #383b3b;
+		border: 1px solid @borderGray;
+		border-radius: 4px;
+		color: #fff;
+		width: 350px;
+		height: 30px;
+		padding-left: 30px;
+	}
+}

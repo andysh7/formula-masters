@@ -1,0 +1,44 @@
+.contacts-card {
+	
+	&__item {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 8px;
+		
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+		}
+		
+		&._location {
+			&:before {
+				background: url('@{base64Path}/icon-location.png') no-repeat;
+				width: 11px;
+				height: 16px;
+				top: 0;
+				left: 0;
+			}
+		}
+		
+		&._phone {
+			&:before {
+				background: url('@{base64Path}/icon-phone.png') no-repeat;
+				width: 16px;
+				height: 16px;
+				left: -3px;
+				top: 1px;
+			}
+		}
+		
+		&._email {
+			&:before {
+				background: url('@{base64Path}/icon-email.png') no-repeat;
+				width: 16px;
+				height: 12px;
+				left: -3px;
+				top: 3px;
+			}
+		}
+	}
+}

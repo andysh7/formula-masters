@@ -9,7 +9,7 @@ var gutil = require('gulp-util');
 var watch = require('gulp-watch');
 var autoprefixer = require('gulp-autoprefixer');
 var runSequence = require('run-sequence');
-var base64 = require('gulp-css-base64');
+var base64 = require('gulp-base64');
 var plumber = require('gulp-plumber');
 var reload = browserSync.reload;
 var rimraf = require('rimraf');
@@ -31,9 +31,10 @@ var config = {
             src + '/css/libs/**/*.{less,css}',
             src + '/css/plugins/**/*.{less,css}',
             src + '/css/variables.less',
+            src + '/css/bootstrap-mixins.less',
+            src + '/css/mixins.less',
             src + '/css/base.less',
             src + '/css/fonts.less',
-            src + '/css/mixins.less',
             src + '/css/*.less',
             src + '/blocks/**/*.less'
         ],
@@ -127,10 +128,10 @@ gulp.task('css', function () {
             cascade: false
         }))
         .pipe(base64({
-            baseDir: src,
             debug: false,
-            maxWeightResource: 5120,
-            extensionsAllowed: ['.png']
+            baseDir: src + '/images',
+            maxImageSize: 8*1024,
+            extensions: ['png']
         }))
         //.pipe(csso())
         .pipe(gulp.dest(config.css.dest))
