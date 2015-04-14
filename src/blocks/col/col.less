@@ -1,0 +1,22 @@
+.col {
+	float: left;
+	margin-right: @baseMargin;
+	
+	&._size {
+		&_4 {
+			width: 380px;
+		}
+		
+		&_8 {
+			width: 600px;
+		}
+		
+		&_12 {
+			width: 100%;
+		}
+	}
+	
+	&:last-child {
+		margin-right: 0;
+	}
+}

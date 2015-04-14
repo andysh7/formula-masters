@@ -1,3 +1,20 @@
 extends ../layouts/index
 
 block content
+    .row
+        .col._size_8
+            +latest-events
+        .col._size_4
+            section.content-box.sidebar._main
+                .sidebar__row
+                    +results
+                .sidebar__row
+                    +partners
+                .sidebar__row
+                    +social
+    .row
+        .col._size_12
+            +teams
+    .row
+        .col._size_12
+            +partners
