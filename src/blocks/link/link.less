@@ -1,0 +1,17 @@
+.link {
+	
+	&._back {
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 13px;
+			height: 13px;
+			border-top: 2px solid @linkColor;
+			border-left: 2px solid @linkColor;
+			transform: rotate(-45deg);
+			position: relative;
+			top: 3px;
+			left: -4px;
+		}
+	}
+}

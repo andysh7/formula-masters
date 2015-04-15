@@ -2,7 +2,7 @@ extends ../layouts/index
 block content
     .row
         .col._size_8
-            section.content-box._page
+            section.content-box._page._requirements
                 .content-box__title._red 
                     | Технические требования к спортивным траспортным средствам класса "Формула-Россия".
                     br 
@@ -39,10 +39,4 @@ block content
                         | vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
                 
         .col._size_4
-            section.content-box.sidebar._inner
-                .sidebar__row
-                    +results
-                .sidebar__row
-                    +partners
-                .sidebar__row
-                    +social
+            +sidebar('_inner')

@@ -22,17 +22,18 @@
 			color: @colorRed;
 			font-size: 18px;
 			text-align: left;
-			margin: 8px 0 17px;
+			margin: 8px 0 11px;
 			line-height: 21px;
 		}
 	}
 	
 	&__intro {
-		border-top: 1px solid @borderGray;
-		border-bottom: 1px solid @borderGray;
-		padding: 8px 0;
+		border-top: 1px solid @separatorColor;
+		border-bottom: 1px solid @separatorColor;
 		font-size: 18px;
 		margin-bottom: 20px;
+		padding: 6px 0;
+		line-height: 21px;
 		
 		&-link {
 			a& {
@@ -50,8 +51,22 @@
 		padding: 11px 20px 31px;
 	}
 	
+	&._requirements {
+		min-height: 930px;
+	}
+	
+	&__date {
+		color: #808080;
+		display: inline-block;
+		margin-bottom: 2px;
+	}
+	
 	img._rounded {
 		border: 1px solid @imageBorderColor;
 		border-radius: @defaultRadius;
+	}
+	
+	.b-share {
+		padding-left: 0 !important;
 	}
 }

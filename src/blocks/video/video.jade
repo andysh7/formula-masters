@@ -8,9 +8,7 @@ mixin video(className)
                 .video__desc
                     | Сюжет о 5 этапе Russian Racing Championship, прошедший в эфире программы "Вести-Спорт" ТК "Россия 2"
                 .video__share
-                    | <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
-                    | <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" 
-                    | data-yashareQuickServices="vkontakte,facebook,twitter" data-yashareTheme="counter"></div>
+                    +share
         else if className == '_mini'
                 .video__container
                     iframe(width="340", height="190", src="https://www.youtube.com/embed/S0C1i-TaoZE?rel=0&amp;showinfo=0", frameborder="0", allowfullscreen)
