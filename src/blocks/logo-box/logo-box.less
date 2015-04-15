@@ -1,0 +1,58 @@
+.logo-box {
+	padding: 14px 14px 5px 11px;
+	
+	&__grid {
+		padding-top: 8px;
+		font-size: 0;
+	}
+	
+	&__item {
+		display: inline-block;
+		width: 242px;
+		text-align: center;
+		height: 101px;
+		margin-bottom: 28px;
+		overflow: hidden;
+		line-height: 102px;
+		
+		&._1st {
+			&:before {
+				content: '';
+				position: relative;
+				display: inline-block;
+				width: 31px;
+				height: 41px;
+				background: url('@{base64Path}/place-1.png') no-repeat;
+				top: 19px;
+			}
+		}
+		
+		&._2nd {
+			&:before {
+				content: '';
+				position: relative;
+				display: inline-block;
+				width: 31px;
+				height: 41px;
+				background: url('@{base64Path}/place-2.png') no-repeat;
+				top: 19px;
+			}
+		}
+		
+		&._3rd {
+			&:before {
+				content: '';
+				position: relative;
+				display: inline-block;
+				width: 31px;
+				height: 41px;
+				background: url('@{base64Path}/place-3.png') no-repeat;
+				top: 19px;
+			}
+		}
+	}
+	
+	&__image {
+		vertical-align: middle;
+	}
+}
