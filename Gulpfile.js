@@ -47,12 +47,16 @@ var config = {
         src: {
             common: [
                 src + '/js/libs/jquery-1.11.2.min.js',
-                 src + '/js/libs/jquery-ui-1.10.4.custom.min.js',
-                 src + '/js/core.js',
-                 src + '/js/libs/*.js',
-                 src + '/js/plugins/*.js',
-                 src + '/js/i18n/*.js',
+                src + '/js/libs/jquery-ui-1.10.4.custom.min.js',
+                src + '/js/libs/*.js',
+                src + '/js/plugins/*.js',
+                '!' + src + '/js/libs/html5shiv.min.js',
+                src + '/js/core.js',
+                src + '/js/i18n/*.js',
                 src + '/js/**/*.{js,json}'
+            ],
+            copy: [
+                src + '/js/**'  
             ],
             blocks: [
                 src + '/blocks/**/*.js'
@@ -146,6 +150,11 @@ gulp.task('js', function () {
         .pipe(gulp.dest(config.js.dest));
 });
 
+gulp.task('js:copy', function() {
+   gulp.src(config.js.src.copy, {base: './src/js'})
+       .pipe(plumber())
+       .pipe(gulp.dest(config.js.dest));
+});
 
 gulp.task('jade:blocks', function (cb) {
     // Удаляем старый файл с блоками
@@ -199,7 +208,7 @@ gulp.task('watch', ['browserSync'], function() {
     gulp.watch(config.css.watchDirs, ['css']);
     gulp.watch(config.images.watchDirs, ['images']);
     gulp.watch(config.fonts.watchDirs, ['fonts']);
-    gulp.watch(config.js.watchDirs, ['js']);
+    gulp.watch(config.js.watchDirs, ['js', 'js:copy']);
     gulp.watch(config.jade.watchDirs.blocks, ['jade']);
     gulp.watch(config.jade.watchDirs.pages, ['jade']);
 });
@@ -208,4 +217,4 @@ gulp.task('browserSync', ['build'], function () {
     browserSync(config.browserSync);
 });
 
-gulp.task('build', ['css', 'jade', 'js', 'images', 'fonts']);
+gulp.task('build', ['css', 'jade', 'js', 'js:copy', 'images', 'fonts']);
