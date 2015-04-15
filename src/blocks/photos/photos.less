@@ -1,0 +1,20 @@
+.photos {
+	margin-top: -1px;
+	padding-left: 1px;
+	
+	&__item {
+		display: inline-block;
+		margin: 0 20px 27px 0;
+		
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+	
+	&__image {
+		width: 160px;
+		height: 100px;
+		border: 1px solid @imageBorderColor;
+		border-radius: @defaultRadius;
+	}
+}

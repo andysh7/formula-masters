@@ -1,3 +1,31 @@
-mixin sidebar()
-    section.content-box.sidebar
-        block
+mixin sidebar(className)
+    section.content-box.sidebar(class=className)
+        if className == '_main'
+            .sidebar__row._results
+                .sidebar__title Турнирная таблица
+                +results
+            .sidebar__row._partners
+                .sidebar__title
+                    | Генеральные 
+                    br
+                    | информационные 
+                    | партнеры
+                +general-partners
+            .sidebar__row._social
+                .sidebar__title Мы в соцсетях
+                +social
+        else if className == '_inner'
+            .sidebar__row._video
+                .sidebar__heading
+                    .sidebar__title._inline Видео
+                    a.sidebar__title-link(href="#") Больше видео
+                +video('_mini')
+            .sidebar__row._photos
+                .sidebar__heading
+                    .sidebar__title._inline Фото
+                    a.sidebar__title-link(href="#") Больше фото
+                +photos
+            .sidebar__row._social
+                .sidebar__heading
+                    .sidebar__title._inline Мы в соцсетях
+                +social

@@ -1,6 +1,6 @@
 mixin logo-box(className)
-    if className == '_partners'
-        section.content-box.logo-box
+    section.content-box.logo-box(class=className)
+        if className == '_partners'
             h1.content-box__title Партнеры
             .logo-box__grid
                 a.logo-box__item(href="#")
@@ -29,8 +29,7 @@ mixin logo-box(className)
                     img.logo-box__image(src="./images/partners/logo-14.png")
                 a.logo-box__item(href="#")
                     img.logo-box__image(src="./images/partners/logo-15.png")
-    else if className == '_teams'
-        section.content-box.logo-box
+        else if className == '_teams'
             h1.content-box__title Команды
             .logo-box__grid
                 a.logo-box__item._1st(href="#")
