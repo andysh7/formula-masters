@@ -1,0 +1,61 @@
+.infoblock {
+	&__title {
+		line-height: 21px;
+		text-transform: uppercase;
+		color: @colorRed;
+		font-weight: bold;
+		font-size: 18px;
+		text-align: left;
+		margin: 11px 0 8px 281px;
+	}
+	
+	&__section {
+		overflow: hidden;
+	}
+	
+	&__photos {
+		float: left;
+	}
+	
+	&__photo {
+		
+	}
+
+	&__content {
+		width: 680px;
+		float: right;
+
+		ul {
+			padding: 0 0 0 13px;
+			line-height: 14px;
+			list-style-type: none;
+			margin: 0 0 17px 0;
+
+			li {
+				position: relative;
+				margin-bottom: 10px;
+
+				&:before {
+					content: '\2022';
+					font-size: 14px;
+					position: absolute;
+					left: -13px;
+				}
+			}
+		}
+
+		p {
+			margin-top: 0;
+			line-height: 24px;
+		}
+	}
+	
+	&__intro {
+		border-top: 1px solid @separatorColor;
+		border-bottom: 1px solid @separatorColor;
+		font-size: 18px;
+		padding: 6px 0 9px;
+		line-height: 21px;
+		margin-bottom: 14px;
+	}
+}
