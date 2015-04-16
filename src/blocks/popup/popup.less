@@ -1,0 +1,40 @@
+.popup {
+	background: @contentBackgroundRGB;
+	background: @contentBackgroundRGBA;
+	border-radius: @defaultRadius;
+	border: 1px solid @borderGray;
+	margin: 0 auto;
+	padding: 9px;
+	
+	a {
+		color: @linkColor;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		&:hover {
+			color: #ed1c24;
+			text-decoration: underline;
+		}
+	}
+	
+	&__head {
+		border-bottom: 1px solid @separatorColor;
+		padding: 9px 0 14px;
+		text-align: center;
+	}
+	
+	&__container {
+		background: #fff;
+		border-radius: @defaultRadius;
+		padding: 5px 20px;
+	}
+	
+	&__title {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		color: @colorRed;
+		line-height: 21px;
+	}
+}

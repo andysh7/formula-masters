@@ -1,0 +1,17 @@
+mixin calendar-popup(id)
+    .popup.calendar-popup(data-popup-id=id).mfp-hide
+        .popup__container
+            .popup__head
+                .popup__title Нижегородское кольцо
+            .calendar-popup__content
+                .calendar-popup__col._photo
+                    img.calendar-popup__image(src="./images/map.png", alt="")
+                .calendar-popup__col._text
+                    | Кольцевая трасса (расположенная в 22 километрах от Нижнего Новгорода, 
+                    | 400 километров к востоку от Москвы) начала работу летом 2010 года. 
+                    | С введением ее в строй Россия стала обладательницей сложной и интересной
+                    | трассы для всех типов кольцевых автогонок, мотогонок, дрэг-рейсинга, картинга.
+            .calendar-popup__links
+                a.calendar-popup__link(href="#") Сайт трассы
+                a.calendar-popup__link(href="#") Билетная программа
+                a.calendar-popup__link._close.mfp-close._inline(href="#") Закрыть

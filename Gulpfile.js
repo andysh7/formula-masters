@@ -138,7 +138,7 @@ gulp.task('css', function () {
             maxImageSize: 8*1024,
             extensions: ['png']
         }))
-        //.pipe(csso())
+        .pipe(csso())
         .pipe(gulp.dest(config.css.dest))
         .pipe(reload({stream: true}));
 });

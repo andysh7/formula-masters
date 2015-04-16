@@ -1,0 +1,36 @@
+.calendar-popup {
+	width: 640px;
+	
+	&__content {
+		font-size: 0;
+		padding: 23px 0;
+	}
+	
+	&__col {
+		&._photo {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 23px;
+			padding-top: 6px;
+		}
+		
+		&._text {
+			display: inline-block;
+			width: 392px;
+			vertical-align: top;
+			line-height: 17px;
+			font-size: 14px;
+		}
+	}
+	
+	&__links {
+		border-top: 1px solid @separatorColor;
+		white-space: nowrap;
+		text-align: center;
+		padding: 15px 0;
+	}
+	
+	&__link {
+		margin: 0 38px;
+	}
+}
