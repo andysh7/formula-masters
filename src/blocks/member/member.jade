@@ -1,0 +1,15 @@
+mixin member(className, photoSrc, name, city, num)
+    .member(class=className)
+        if className === '_vacant'
+            .member__photo
+            .member__info
+                .member__desc Место пилота вакантно
+        else
+            img.member__photo(src=photoSrc, alt="")
+            .member__info
+                .member__name= name
+                .member__city= city
+                .member__num
+                    | Стартовый номер
+                    | 
+                    b= num
