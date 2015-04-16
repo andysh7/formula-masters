@@ -3,7 +3,8 @@ block content
     .row
         .col._size_8
             section.content-box._page
-                .content-box.__title
+                .content-box__title._red Календарь серии на 2015 год
+
                 +calendar
                 p
                     | TBC - проведение этапа будет подтверждено дополнительно.
@@ -23,10 +24,4 @@ block content
                     | Сейчас весь коллектив АНО "Формула-чемпионат" готовит гоночную технику к новому сезону и 
                     | с нетерпением ждет его начала.
         .col._size_4
-            section.content-box.sidebar._inner
-                .sidebar__row
-                    +results
-                .sidebar__row
-                    +partners
-                .sidebar__row
-                    +social
+            +sidebar('_inner')

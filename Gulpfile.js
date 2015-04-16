@@ -50,10 +50,11 @@ var config = {
                 src + '/js/libs/jquery-ui-1.10.4.custom.min.js',
                 src + '/js/libs/*.js',
                 src + '/js/plugins/*.js',
+                src + '/js/i18n/*.js',
                 '!' + src + '/js/libs/html5shiv.min.js',
                 src + '/js/core.js',
-                src + '/js/i18n/*.js',
-                src + '/js/**/*.{js,json}'
+                src + '/blocks/**/*.js',
+                src + '/js/**/*.{js,json}',
             ],
             copy: [
                 src + '/js/**'  
