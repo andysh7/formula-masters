@@ -1,3 +1,3 @@
-# Формула Россия #
+# Formula Masters Российская серия #
 
-http://formula-champ.ru/
+http://formula-masters.ru
